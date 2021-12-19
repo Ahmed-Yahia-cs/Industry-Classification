@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <!--<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">-->
+    <style>
+
+    * {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  background: #5D4157;
+  background: -webkit-linear-gradient(to bottom, #5D4157, #A8CABA);
+  background: linear-gradient(to bottom, #274046, #A8CABA);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.box {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  margin: 5px 0px 60px 0px;
+}
+
+.box-sm {
+  height: 8px;
+  margin: 0;
+  flex-grow: 1;
+  transition: all .8s ease-in-out;
+  cursor: pointer;
+}
+
+// Growing the width of box, when hover using flex-grow property
+.box-sm:hover {
+  flex-grow: 12;
+}
+
+.container,
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  background: #424242;
+  height: 100%;
+  margin: 20px;
+  padding: 20px;
+  outline: 1px dashed #98abb9;
+  outline-offset: -5px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .3), 0 2px 2px rgba(0, 0, 0, .2), 0 4px 4px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .1);
+}
+
+.post {
+  margin-bottom: 50px;
+  h2,
+  p {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  h2 {
+    font-size: 60px;
+    color: #E0E0E0;
+    text-shadow: 0px 1px 1px black;
+  }
+}
+
+.red {
+  background-color: #FF5852;
+}
+
+.orange {
+  background-color: #FF9000;
+}
+
+.yellow {
+  background-color: #FFD300;
+}
+
+.green {
+  background-color: #3DCD49;
+}
+
+.blue {
+  background-color: #0089D7;
+}
+
+.purple {
+  background-color: #9E44C4;
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- 	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Job Title Classification</h2>
+		
+	</div>
+	</header>
+	<div class="results">
+
+
+		
+
+	<h2 style="color:red;">{{prediction}}</h2>
+
+	</div> -->
+
+
+<div class="container">
+  <div class="post">
+    <h2>Job Title Classification Result</h2>
+    <h2>{{prediction}}</h2>
+  </div>
+
+
+  <div class="box">
+    <div class="box-sm red"></div>
+    <div class="box-sm orange"></div>
+    <div class="box-sm yellow "></div>
+    <div class="box-sm green "></div>
+    <div class="box-sm blue "></div>
+    <div class="box-sm purple"></div>
+  </div>
+</div>
+
+</body>
+</html>
